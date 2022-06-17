@@ -48,3 +48,47 @@ li {
 .cart {
   padding-bottom: 9px;
 }
+
+/* main container styles */
+.container {
+  /* border: 1px solid red; */
+  width: 80%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+/* left container images */
+.left-container {
+  /* border: 1px solid blue; */
+  margin-right: 50px;
+}
+
+.upper-image {
+  width: 400px;
+  height: 400px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+.lower-image {
+  display: flex;
+  justify-content: space-around;
+}
+.lower-image img {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+}
+.second-image,
+.third-image {
+  margin-left: 10px;
+}
+.third-image {
+  margin-right: 10px;
+}
+
+/* right container content */
+.right-container {
+  border: 1px solid green;
+}
