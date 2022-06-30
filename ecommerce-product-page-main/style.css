@@ -79,6 +79,13 @@ li {
   border-radius: 20px;
   margin-bottom: 30px;
 }
+.second-img,.third-img, .fourth-img{
+  display: none;
+  width: 400px;
+  height: 400px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
 .lower-image {
   display: flex;
   justify-content: space-around;
