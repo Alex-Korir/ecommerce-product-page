@@ -10,7 +10,7 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.css" />
     <title>Frontend Mentor | E-commerce product page</title>
   </head>
   <body>
@@ -31,7 +31,7 @@
       </div>
       <div class="right-nav">
         <ul>
-          <li>
+          <li class="cart-button">
             <a href="#"
               ><img src="images/icon-cart.svg" class="cart" alt=""
             /></a>
@@ -43,7 +43,134 @@
           </li>
         </ul>
       </div>
+      <div class="cart-container" id="container">
+        <div class="cart-nav">
+          <h3>Cart</h3>
+        </div>
+        <div class="cart-box">
+          <h4>Your cart is empty</h4>
+        </div>
+      </div>
     </nav>
-    <script src="script.js"></script>
+    <div class="container">
+      <div class="left-container">
+        <div class="upper-image" id="display-image"></div>
+        <div class="lower-image" id="select">
+          <div class="small-images active" id="thumbnails" data-value="1">
+            <img
+              src="/ecommerce-product-page-main/images/image-product-1-thumbnail.jpg"
+              alt="Thumbnail-1"
+            />
+          </div>
+          <div class="small-images" id="thumbnails" data-value="2">
+            <img
+              src="/ecommerce-product-page-main/images/image-product-2-thumbnail.jpg"
+              alt="Thumbnail-2"
+            />
+          </div>
+          <div class="small-images" id="thumbnails" data-value="3">
+            <img
+              src="/ecommerce-product-page-main/images/image-product-3-thumbnail.jpg"
+              alt="Thumbnail-3"
+            />
+          </div>
+          <div class="small-images" id="thumbnails" data-value="4">
+            <img
+              src="/ecommerce-product-page-main/images/image-product-4-thumbnail.jpg"
+              alt="Thumbnail-4"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="right-container">
+        <div class="content-container">
+          <div class="title">
+            <h4>SNEAKER COMPANY</h4>
+          </div>
+          <div class="heading">
+            <h1>Fall Limited Edition Sneakers</h1>
+          </div>
+          <div class="main-para">
+            <p>
+              These low-profile sneakers are your perfect casual wear companion.
+              Featuring a durable rubber outer sole, they'll withstand
+              everything the weather can offer
+            </p>
+          </div>
+          <div class="price">
+            <div class="one-line">
+              <h2><span>&#36;</span>125.00</h2>
+              <h4>50%</h4>
+            </div>
+            <h5><span>&#36;</span>250.00</h5>
+          </div>
+          <div class="buttons">
+            <div class="left-bar">
+              <img
+                src="/ecommerce-product-page-main/images/icon-minus.svg"
+                alt="Minus icon"
+                class="minus"
+              />
+              <h4>0</h4>
+              <img
+                src="/ecommerce-product-page-main/images/icon-plus.svg"
+                alt=""
+                class="plus"
+              />
+            </div>
+            <div class="right-bar">
+              <img
+                src="/ecommerce-product-page-main/images/icon-cart.svg"
+                alt="cart"
+              />Add to cart
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="containerOverlay">
+      <div class="slider">
+        <div class="close-btn">
+          <img src="/ecommerce-product-page-main/images/icon-close.svg" alt="close-btn">
+        </div>
+        <div class="modal-images viscible">
+          <img src="/ecommerce-product-page-main/images/image-product-1.jpg" alt="image one"/>
+        </div>
+        <div class="modal-images hidden">
+          <img src="/ecommerce-product-page-main/images/image-product-2.jpg" alt="image two"/>
+        </div>
+        <div class="modal-images hidden">
+          <img src="/ecommerce-product-page-main/images/image-product-3.jpg" alt="image three"/>
+        </div>
+        <div class="modal-images hidden">
+          <img src="/ecommerce-product-page-main/images/image-product-4.jpg" alt="image four"/>
+        </div>
+      </div>
+        <!-- The buttons of the image slider -->
+        <div class="button-slider">
+          <div class="prev">
+            <img src="/ecommerce-product-page-main/images/icon-previous.svg"/>
+          </div>
+          <div class="next">
+            <img src="/ecommerce-product-page-main/images/icon-next.svg"/>
+          </div>
+        </div>
+      <div class="low-images">
+        <div class="modal-Thumb activated" id="dot">
+          <img src="/ecommerce-product-page-main/images/image-product-1-thumbnail.jpg" alt="Thumbnail-1"/>
+        </div>
+        <div class="modal-Thumb" id="dot">
+          <img src="/ecommerce-product-page-main/images/image-product-2-thumbnail.jpg" alt="Thumbnail-2"/>
+        </div>
+        <div class="modal-Thumb" id="dot">
+          <img src="/ecommerce-product-page-main/images/image-product-3-thumbnail.jpg" alt="Thumbnail-3"/>
+        </div>
+        <div class="modal-Thumb" id="dot">
+          <img src="/ecommerce-product-page-main/images/image-product-4-thumbnail.jpg" alt="Thumbnail-4"/>
+        </div>
+      </div>
+    </div>
+    <div class="overlay" id="Overlay"></div>
+    <script src="index.js"></script>
   </body>
 </html>

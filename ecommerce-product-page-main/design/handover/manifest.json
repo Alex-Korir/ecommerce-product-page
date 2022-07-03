@@ -1,0 +1,10 @@
+{
+  "name": "handover",
+  "id": "1119166830356482181",
+  "api": "1.0.0",
+  "main": "code.js",
+  "editorType": [
+    "figjam"
+  ],
+  "ui": "ui.html"
+}
