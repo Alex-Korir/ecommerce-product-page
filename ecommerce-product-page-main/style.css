@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --orange: hsl(26, 100%, 55%);
+  --grayish-blue: hsl(220, 14%, 75%);
+  --very-vark-blue: hsl(220, 13%, 13%);
+  --dark-grayish-blue: hsl(219, 9%, 45%);
+  --pale-orange: hsl(25, 100%, 94%);
+  --light-grayinsh-blue: hsl(223, 64%, 98%);
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+#nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  border: none;
+  border-bottom: 1px solid rgba(104, 112, 125, 0.2);
+  margin: 0 auto;
+  height: 100px;
+}
+
+.left-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: hsl(219, 9%, 45%);
+  font-family: var(--main-font-family);
+}
+
+.logo {
+  margin-right: 30px;
+}
+.nav-links ul li {
+  padding: 0 15px;
+}
+
+li {
+  display: inline;
+}
+.avatar {
+  width: 40px;
+  margin-left: 30px;
+}
+.cart {
+  padding-bottom: 9px;
+}
+
+/* main container styles */
+.container {
+  width: 80%;
+  height: 85vh;
+  display: flex;
+  margin-top: 50px;
+  margin-left: 200px;
+  /* border: 1px solid black; */
+  position: relative;
+}
+
+/* left container images */
+.left-container {
+  /* border: 1px solid blue; */
+  margin-right: 50px;
+}
+
+.upper-image {
+  width: 400px;
+  height: 400px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+.second-img,.third-img, .fourth-img{
+  display: none;
+  width: 400px;
+  height: 400px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+.lower-image {
+  display: flex;
+  justify-content: space-around;
+}
+.lower-image img {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+}
+.second-image,
+.third-image {
+  margin-left: 10px;
+}
+.third-image {
+  margin-right: 10px;
+}
+
+/* right container content */
+.right-container {
+  /* border: 1px solid green; */
+  margin-top: 70px;
+  margin-left: 50px;
+  width: 50%;
+}
+.company-name {
+  color: var(--orange);
+  font-weight: 700;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+.sneakers-edition {
+  margin-bottom: 35px;
+  color: var(--very-vark-blue);
+}
+.product-description {
+  color: var(--grayish-blue);
+  line-height: 24px;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+.price {
+  color: var(--very-vark-blue);
+  margin-bottom: 10px;
+}
+.discount {
+  color: var(--orange);
+  margin-left: auto 0;
+  font-size: 15px;
+  padding: 2px 20px;
+  border-radius: 5px;
+  background-color: var(--pale-orange);
+}
+.initial-price {
+  text-decoration: line-through;
+  margin-bottom: 40px;
+  color: rgb(182, 188, 200);
+  font-weight: 700;
+}
+.bar{
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  /* border: 1px solid green; */
+  height: 50px;
+}
+.left-bar{
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--light-grayinsh-blue);
+  border-radius: 10px;
+  /* border: 1px solid blue; */
+}
+.minus,.plus,.zero{
+  margin: auto 0;
+}
+.minus{
+  width: 12px;
+  height: 3px;
+}
+.plus{
+  width: 12px;
+  height: 10px;
+}
+.right-bar{
+  background-color: var(--orange);
+  width: 65%;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart-icon{
+  width: 18px;
+  height: 18px;
+  margin-right: 18px;
+}
+.cart-text{
+  font-weight: 400;
+  font-size: 15px;
+}
