@@ -1,7 +1,6 @@
 const btn_images = document.querySelectorAll(".small-images");
 const dis_img = document.querySelector("#display-image");
 const thumbnails = document.querySelectorAll("#thumbnails");
-const  cart_button = document.querySelector(".cart-button");
 /*MAKING ONE BUTTON BECOME ACTIVE AT A TIME*/
 
 const selection = document.querySelector("#select");
@@ -119,6 +118,10 @@ const moveToPrevSlide = () => {
   updateSliderPosition();
   updateActiveState();
 }
+// function for returning the overlay to its original position after its clicked
+const returnOrginal = () => {
+  slidePosition = 0;
+}
 
 // The close button function
 const close_button = document.querySelector(".close-btn");
@@ -129,16 +132,73 @@ close_button.addEventListener('click', () => {
   middle_cont.classList.remove("actives");
 });
 
-// The cart icon button
-const cart_container = document.getElementById("container");
-cart_button.addEventListener("click", () => {
-  if(cart_container.style.display === "none"){
-    cart_container.style.display = "block";
+// ACTIVATING SELECTION
+
+// The Zero and empty cart container
+
+//Target the container holding the number, cart and Add button
+const zeroNumber = document.querySelector(".zero-num");
+const  cart_button = document.querySelector(".cart-button");
+const cart_container = document.getElementById("cartContainer");
+const addToCart = document.querySelector(".right-bar");
+cart_button.addEventListener("click", toggleEmptyCart);
+// addToCart.addEventListener("click", toggleEmptyCart);
+  function toggleEmptyCart(){
+    let count = 0;
+    const numb = parseInt(zeroNumber.innerHTML = count);
+    if(numb === 0){
+      cart_container.classList.toggle("showing");
+      updateCart.style.display = "none";
+    }
+    else{
+      cart_container.classList.toggle("cart-container");
+    }
+  }
+  
+addToCart.addEventListener("click", function lotery(){
+  if(zeroNumber.innerHTML > 0){
+    cartTrue.style.display = "block";
+  }
+  toggleEmptyCart();
+})
+
+//..This is the plus and minus button svg
+const plusBtn = document.querySelector(".plus");
+const minusBtn = document.querySelector(".minus");
+const updateCart = document.querySelector(".updateNumber");
+
+const cartTrue = document.querySelector(".cart-true");
+
+
+plusBtn.addEventListener("click", increament);
+minusBtn.addEventListener("click", decreament);
+let count = 0;
+const numbe = parseInt(zeroNumber.innerHTML = count);
+updateCart.innerHTML = count;
+
+function increament(){
+  count++;
+  parseInt(zeroNumber.innerHTML = count);
+  updateCart.innerHTML = count;
+  updatingCartContainer();
+}
+function decreament(){
+  count--;
+  parseInt(zeroNumber.innerHTML = count);
+  updateCart.innerHTML = count;
+  updatingCartContainer();
+  // console.log("numbe");
+} 
+
+const updatingCartContainer = () => {
+  if(zeroNumber.innerHTML > 0){
+    console.log("Hello World!");
+    updateCart.style.display = "flex";
+    const cartBox = document.querySelector(".cart-box");
+    cart_container.style.display = "none";
+    // cartTrue.style.display = "block"
   }
   else{
-    cart_container.style.display = "none";
+    updateCart.style.display = "none";
   }
-});
-
-
-
+}
