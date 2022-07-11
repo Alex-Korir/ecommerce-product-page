@@ -141,33 +141,33 @@ const zeroNumber = document.querySelector(".zero-num");
 const  cart_button = document.querySelector(".cart-button");
 const cart_container = document.getElementById("cartContainer");
 const addToCart = document.querySelector(".right-bar");
-cart_button.addEventListener("click", toggleEmptyCart);
 // addToCart.addEventListener("click", toggleEmptyCart);
-  function toggleEmptyCart(){
+  
+function toggleEmptyCart(){
     let count = 0;
     const numb = parseInt(zeroNumber.innerHTML = count);
     if(numb === 0){
-      cart_container.classList.toggle("showing");
+      cartBox.style.display = "block";
+      cartTrue.style.display = "none";
       updateCart.style.display = "none";
     }
+    else if(numb > 0){
+      cartTrue.style.display = "block";
+      cartBox.style.display = "none"
+    }
     else{
-      cart_container.classList.toggle("cart-container");
+      cartBox.style.display = "none";
     }
   }
   
-addToCart.addEventListener("click", function lotery(){
-  if(zeroNumber.innerHTML > 0){
-    cartTrue.style.display = "block";
-  }
-  toggleEmptyCart();
-})
 
 //..This is the plus and minus button svg
 const plusBtn = document.querySelector(".plus");
 const minusBtn = document.querySelector(".minus");
 const updateCart = document.querySelector(".updateNumber");
-
+const cartBox = document.querySelector(".cart-box");
 const cartTrue = document.querySelector(".cart-true");
+// const numbProd = document.querySelector(".numbProd");
 
 
 plusBtn.addEventListener("click", increament);
@@ -180,25 +180,69 @@ function increament(){
   count++;
   parseInt(zeroNumber.innerHTML = count);
   updateCart.innerHTML = count;
-  updatingCartContainer();
+  cart_container.style.display = "none";
 }
 function decreament(){
   count--;
   parseInt(zeroNumber.innerHTML = count);
   updateCart.innerHTML = count;
-  updatingCartContainer();
-  // console.log("numbe");
+  cart_container.style.display = "none";
 } 
 
 const updatingCartContainer = () => {
   if(zeroNumber.innerHTML > 0){
-    console.log("Hello World!");
     updateCart.style.display = "flex";
-    const cartBox = document.querySelector(".cart-box");
-    cart_container.style.display = "none";
-    // cartTrue.style.display = "block"
+    
   }
-  else{
+  else if(zeroNumber.innerHTML <= 0){
     updateCart.style.display = "none";
   }
 }
+
+const showingCartContainer = () => {
+  cartTrue.style.display = "block";
+  cartBox.style.display = "none";
+}
+
+
+// ADD TO CART BUTTON.........................
+addToCart.addEventListener("click", function lotery(){
+  updatingCartContainer();
+});
+
+cart_button.addEventListener("click", function home(){
+  cart_container.style.display = "block";
+  if(zeroNumber.innerHTML > 0){
+    showingCartContainer();
+  }
+  else{
+    toggleEmptyCart();
+  }
+  changeAns();
+});
+
+// CLICKING OUTSIDE THE CART-CONTAIER...&it dissapears.......
+document.addEventListener("mouseup", function(e){
+  if(!cart_container.contains(e.target)){
+    cart_container.style.display = "none";
+  }
+});
+
+// UPDATING THE CART CONTAINER VALUE
+function changeAns(){
+  const numbProd = cart_container.querySelector("p .numbProd");
+  const zoom = (numbProd.innerHTML = count);
+  const lum = parseInt(125 * zoom);
+  console.log(lum);
+  const outputs = cart_container.querySelector("p .outputs");
+  outputs.innerHTML = "&#36;" + lum;
+}
+
+
+const deletes = document.querySelector(".delete");
+deletes.addEventListener('click', function removeThem(){
+  cartTrue.style.display = "none";
+  cartBox.style.display = "block";
+  updateCart.style.display = "none";
+  zeroNumber.innerHTML = 0;
+});
