@@ -630,3 +630,24 @@ li {
     opacity: 1;
   }
 }
+
+@media only screen and (max-width: 822px) {
+  #nav-bar {
+    width: 47em;
+  }
+  .nav-links ul li {
+    padding: 1em 0.4em;
+    font-size: 1em;
+  }
+  .container {
+    width: 85%;
+    height: 68vh;
+  }
+  .left-container {
+    justify-content: space-around;
+  }
+  .small-images {
+    width: 4.5em;
+    height: 4.5em;
+  }
+}
