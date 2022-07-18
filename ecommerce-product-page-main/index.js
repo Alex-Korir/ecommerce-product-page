@@ -122,9 +122,9 @@ const returnOrginal = () => {
 };
 
 // The close button function
+
 const close_button = document.querySelector(".close-btn");
 close_button.addEventListener("click", () => {
-  const over = document.getElementById("Overlay");
   const middle_cont = document.getElementById("containerOverlay");
   over.classList.remove("actives");
   middle_cont.classList.remove("actives");
@@ -239,16 +239,20 @@ deletes.addEventListener("click", function removeThem() {
 });
 
 //MOBILE MENUUUUUUUUUU
+const overWay = document.querySelector(".overway");
 
 const hamburger = document.querySelector(".hamburger");
-const closeBtn = document.querySelector(".close-btn");
+const closeBtnn = document.querySelector(".close-btnn");
 const navMenu = document.querySelector(".nav-menu");
 
-closeBtn.addEventListener("click", () => {
-  navMenu.style.display = "none";
+hamburger.addEventListener("click", () => {
+  overWay.classList.add("activood");
+  navMenu.classList.add("lamper");
 });
 
-hamburger.addEventListener("click", () => {
-  over.classList.add("activood");
-  navMenu.classList.add("activood");
+closeBtnn.addEventListener("click", () => {
+  navMenu.classList.remove("lamper");
+  overWay.classList.remove("activood");
+  // over.style.cssText = "opacity: 0; pointer-events: none";
+  console.log("You never lost a battle");
 });
