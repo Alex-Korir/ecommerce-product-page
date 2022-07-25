@@ -256,3 +256,7 @@ closeBtnn.addEventListener("click", () => {
   // over.style.cssText = "opacity: 0; pointer-events: none";
   console.log("You never lost a battle");
 });
+
+// MOBILE MENU PREVIOUS AND NEXT BUTTONS
+const arrow1 = document.querySelector(".arrow1");
+const arrow2 = document.querySelector(".arrow2");
