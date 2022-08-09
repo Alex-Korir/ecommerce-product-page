@@ -190,6 +190,7 @@ const updatingCartContainer = () => {
     updateCart.style.display = "flex";
   } else if (zeroNumber.innerHTML <= 0) {
     updateCart.style.display = "none";
+    toggleEmptyCart();
   }
 };
 
