@@ -237,6 +237,7 @@ deletes.addEventListener("click", function removeThem() {
   cartBox.style.display = "block";
   updateCart.style.display = "none";
   zeroNumber.innerHTML = 0;
+  count = 0;
 });
 
 //MOBILE MENUUUUUUUUUU
