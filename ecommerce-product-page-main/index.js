@@ -19,14 +19,10 @@ for (i = 0; i < thumbnails.length; i++) {
   thumbnails[i].addEventListener("click", runAway);
   function runAway() {
     const house = this.dataset.value;
-    const image_one =
-      "url('/ecommerce-product-page-main/images/image-product-1.jpg')";
-    const image_two =
-      "url('/ecommerce-product-page-main/images/image-product-2.jpg')";
-    const image_three =
-      "url('/ecommerce-product-page-main/images/image-product-3.jpg')";
-    const image_four =
-      "url('/ecommerce-product-page-main/images/image-product-4.jpg')";
+    const image_one = "url('images/image-product-1.jpg')";
+    const image_two = "url('images/image-product-2.jpg')";
+    const image_three = "url('images/image-product-3.jpg')";
+    const image_four = "url('images/image-product-4.jpg')";
     if (house === "1") {
       console.log("looming");
       dis_img.style.backgroundImage = image_one;
